@@ -76,11 +76,21 @@ function getMeanScore(scores) {
     return (sum / numbers).toFixed(0,2);
 }
 
-
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
-  // Add your code here!
+  let result;
+  if((n%3 === 0) && (n%5 === 0)){
+    result = "fizzbuzz";
+  }else if(n%3 === 0){
+    result = "fizz";
+  }else if(n%5 === 0){
+    result = "buzz";
+  }else{
+    result = n;
+  }
+  return result;
 }
+
 
 module.exports = {
   capitalize,
@@ -93,4 +103,4 @@ module.exports = {
   countLinuxUsers,
   getMeanScore,
   simpleFizzBuzz
-};
+}
